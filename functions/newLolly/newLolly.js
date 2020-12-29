@@ -81,7 +81,6 @@ const resolvers = {
 
   Mutation: {
     createLolly: async (_, args) => {
-      // const iid = shortid.generate();
       const result = await client.query(
         q.Create(q.Collection("lollies"), {
           data: args,
