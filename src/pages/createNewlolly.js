@@ -41,12 +41,12 @@ export default function CreateNewlolly() {
   const senderNameRef = useRef()
 
   const [createLolly] = useMutation(createlollyMutation)
-
+  const id = shortid.generate()
   const onSubmit = async () => {
     console.log("clicked")
     console.log("color 1", color1)
     console.log("sender", senderNameRef.current.value)
-    const id = shortid.generate()
+    // const id = shortid.generate()
     const result = await createLolly({
       variables: {
         senderName: senderNameRef.current.value,
@@ -59,7 +59,6 @@ export default function CreateNewlolly() {
       },
     })
     navigate(`/lollies/${id}`)
-    console.log("result in client", result)
   }
 
   return (
