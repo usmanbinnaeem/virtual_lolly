@@ -1,5 +1,5 @@
 import React from "react"
-import { navigate, Link } from "gatsby"
+import { navigate, Link, graphql } from "gatsby"
 import Lolly from "../components/Lolly"
 import Header from "./Header"
 
