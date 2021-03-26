@@ -44,11 +44,6 @@ export default function CreateNewlolly() {
  
   const onSubmit = async () => {
     const id = shortid.generate()
-    console.log("clicked")
-    console.log("color 1", color1)
-    console.log("sender", senderNameRef.current.value)
-    // const id = shortid.generate()
-    const submitForm() = async () => { 
     const result = await createLolly({
       variables: {
         senderName: senderNameRef.current.value,
@@ -60,8 +55,6 @@ export default function CreateNewlolly() {
         yourLolly: id,
       },
     })
-    }
-    submitForm()
     navigate(`/lollies/${id}`)
   }
 
