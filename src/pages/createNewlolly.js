@@ -61,7 +61,7 @@ export default function CreateNewlolly() {
       },
     })
     }
-    submitForm();
+    submitForm()
     navigate(`/lollies/${id}`)
   }
 
