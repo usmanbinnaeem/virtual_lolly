@@ -41,8 +41,9 @@ export default function CreateNewlolly() {
   const senderNameRef = useRef()
 
   const [createLolly] = useMutation(createlollyMutation)
-  const id = shortid.generate()
+ 
   const onSubmit = async () => {
+    const id = shortid.generate()
     console.log("clicked")
     console.log("color 1", color1)
     console.log("sender", senderNameRef.current.value)
